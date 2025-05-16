@@ -1,10 +1,9 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { AreaChart, Area, ResponsiveContainer, Tooltip } from 'recharts';
 import { useColorMode } from '@chakra-ui/react';
 import CurrencyFormat from '@/components/CurrencyFormat';
 import Image from '@/components/Image';
 import Percent from '@/components/Percent';
-import Icon from '@/components/Icon';
 
 import { chartToken } from '@/mocks/charts';
 
@@ -28,9 +27,11 @@ const CustomTooltip = ({ active, payload, label }: any) => {
   return null;
 };
 
-type ChartProps = {};
+type ChartProps = {
+  token: string;
+};
 
-const Chart = ({}: ChartProps) => {
+const Chart = ({token}: ChartProps) => {
   const { colorMode } = useColorMode();
   const isDarkMode = colorMode === 'dark';
   const [range, setRange] = useState('');

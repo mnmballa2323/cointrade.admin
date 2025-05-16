@@ -4,22 +4,24 @@ import Image from '@/components/Image';
 import Percent from '@/components/Percent';
 import { prices } from '@/mocks/trade';
 import { useRouter } from 'next/navigation';
+import { Divider } from '@chakra-ui/react';
 
 type PricesProps = {};
 
 const Prices = ({}: PricesProps) => {
-  const router = useRouter();
   return (
     <div>
-      <div className="text-title-1s mb-6 md:mb-4 md:text-[1.125rem]">
-        Prices
+
+      <div className="text-title-1s text-center mb-6 md:mb-4 md:text-[1.125rem]">
+        Crytos
       </div>
+
+      <Divider/>
       <div className="-mx-3 space-y-2 md:-mx-2">
         {prices.map(item => (
           <div
             className="flex h-20 cursor-pointer items-center justify-between rounded-2xl border border-transparent px-3 transition-all hover:border-theme-stroke hover:shadow-[0_0_0.875rem_-0.25rem_rgba(0,0,0,0.05),0_2rem_3rem_-0.5rem_rgba(0,0,0,0.05)] md:h-18 md:px-2"
             key={item.id}
-            onClick={() => router.push('/token')}
           >
             <div className="flex w-44 items-center md:w-auto md:grow">
               <div className="mr-4">
@@ -68,8 +70,8 @@ const Prices = ({}: PricesProps) => {
               <Percent className="text-base-2" value={item.percent} />
             </div>
             <div className="shrink-0">
-              <Link className="btn-gray h-10" href="/token">
-                Buy
+              <Link className="btn-gray h-10" href={`/token/${item.currencyShort}`}>
+                More Details
               </Link>
             </div>
           </div>

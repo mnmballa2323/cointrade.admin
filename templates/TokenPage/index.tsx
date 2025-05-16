@@ -5,15 +5,15 @@ import BuyAndSell from '@/components/BuyAndSell';
 import Chart from './Chart';
 import Details from './Details';
 
-const AssetPage = () => {
+const AssetPage = ({token}:{token:string}) => {
   return (
     <Layout title="Ethereum">
       <div className="flex items-start lg:block">
         <div className="card grow">
-          <Chart />
-          <Details />
+          <Chart token={token}/>
+          <Details token={token}/>
         </div>
-        <BuyAndSell />
+        {/* <BuyAndSell /> */}
       </div>
     </Layout>
   );

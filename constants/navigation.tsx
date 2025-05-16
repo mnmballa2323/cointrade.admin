@@ -6,13 +6,13 @@ export const navigation = [
     image: '/icons/Chat.svg',
     url: '/',
   },
-  // {
-  //   id: '4',
-  //   title: 'Coins',
-  //   icon: 'trade',
-  //   image: '/icons/Coins.svg',
-  //   url: '/trade',
-  // },
+  {
+    id: '4',
+    title: 'Crytros',
+    icon: 'trade',
+    image: '/icons/Coins.svg',
+    url: '/trade',
+  },
   // {
   //   id: '2',
   //   title: 'Agents',
@@ -26,5 +26,12 @@ export const navigation = [
     icon: 'transaction',
     image: '/icons/Transactions.svg',
     url: '/transactions',
+  },
+    {
+    id: '3',
+    title: 'Setting',
+    icon: 'settings',
+    image: '/icons/Transactions.svg',
+    url: '/settings',
   },
 ];
