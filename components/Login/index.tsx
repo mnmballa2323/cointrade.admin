@@ -23,7 +23,7 @@ const Login = ({
 
   return (
     <div className="relative flex min-h-svh bg-theme-on-surface-1 p-4 lg:pb-12 lg:pt-24 md:px-6 md:pb-8 md:pt-20">
-      <div className="text-base-1s absolute right-12 top-12 text-theme-secondary 2xl:right-10 2xl:top-10 xl:right-6 xl:top-6 lg:right-12 lg:top-12 md:right-6 md:top-8">
+      {/* <div className="text-base-1s absolute right-12 top-12 text-theme-secondary 2xl:right-10 2xl:top-10 xl:right-6 xl:top-6 lg:right-12 lg:top-12 md:right-6 md:top-8">
         {signIn ? 'Dont have an account?' : 'Already a member?'}&nbsp;
         <Link
           className="text-theme-primary transition-colors hover:text-primary-1"
@@ -31,10 +31,10 @@ const Login = ({
         >
           {signIn ? 'Sign up' : 'Sign in'}
         </Link>
-      </div>
-      <div className="relative w-[37.5rem] overflow-hidden rounded-[2rem] bg-theme-dune 2xl:w-[30rem] xl:w-[24.375rem] lg:hidden">
+      </div> */}
+      {/* <div className="relative w-[37.5rem] overflow-hidden rounded-[2rem] bg-theme-dune 2xl:w-[30rem] xl:w-[24.375rem] lg:hidden">
         <Image className="object-cover" src={image} fill alt="" />
-      </div>
+      </div> */}
       <div className="flex grow items-center justify-center px-12 py-14 lg:p-0">
         <div className="w-full max-w-[32.5rem] 2xl:max-w-[24rem]">
           <div className="mb-10 2xl:mb-8">

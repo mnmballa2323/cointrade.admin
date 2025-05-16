@@ -77,7 +77,7 @@ const Sidebar = ({ className, visible, onClick }: SidebarProps) => {
         }`}
       >
         {/* User Profile Section */}
-        <Link href={`/user/${address}`} className="flex items-center">
+        {/* <Link href={`/user/${address}`} className="flex items-center">
           <div className="mb-4 mt-4 flex content-center items-center justify-between space-x-4">
             <Image
               src={'/images/user.png'}
@@ -96,14 +96,11 @@ const Sidebar = ({ className, visible, onClick }: SidebarProps) => {
                 className={`text-sm font-semibold ${visible ? '' : 'hidden'}`}
               >
                 {trimAddress(address)}
-                {/* <Icon
-                className="ml-2 fill-theme-secondary opacity-50 transition-[fill,opacity] group-hover:fill-theme-primary group-hover:opacity-100"
-                name="copy"
-              /> */}
+            
               </span>
             </div>
           </div>
-        </Link>
+        </Link> */}
 
         {/* Divider */}
         <Dvider />
