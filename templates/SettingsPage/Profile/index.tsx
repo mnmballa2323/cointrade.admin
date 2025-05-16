@@ -15,13 +15,10 @@ const Profile = ({}: ProfileProps) => {
   const [social, setSocial] = useState('');
 
   return (
-    <Details title="Profile" image="/images/profile-main.png">
+    <Details title="Profile">
       <div className="space-y-6">
         <div className="">
           <div className="text-base-2 mb-1">Avatar</div>
-          <div className="text-body-2s mb-3 text-theme-secondary">
-            Enhanced AI predictive analytics
-          </div>
           <div className="flex items-center">
             <div className="mr-5 shrink-0">
               <Image
@@ -65,14 +62,6 @@ const Profile = ({}: ProfileProps) => {
             type="email"
             value={email}
             onChange={e => setEmail(e.target.value)}
-            required
-          />
-          <Field
-            className="flex-1"
-            label="Location"
-            placeholder="Location"
-            value={location}
-            onChange={e => setLocation(e.target.value)}
             required
           />
         </div>

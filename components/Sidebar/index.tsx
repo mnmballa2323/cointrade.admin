@@ -74,6 +74,7 @@ const Sidebar = ({ className, visible, onClick }: SidebarProps) => {
       >
         {/* User Profile Section */}
         <div className="flex justify-between content-center  items-center space-x-4 mb-4 mt-4">
+          <Link href={`settings`}>
           <Image
             src={'/images/user.png'}
             width={45}
@@ -81,6 +82,7 @@ const Sidebar = ({ className, visible, onClick }: SidebarProps) => {
             className="rounded-full cursor-pointer"
             alt="User Profile"
           />
+          </Link>
           <div className="flex flex-col items-end cursor-pointer">
             <span className={`font-semibold text-sm ${visible ? '' : 'hidden'}`}>yourEmailAddress@gmail.com</span>
             <span className={`font-semibold text-sm ${visible ? '' : 'hidden'}`}>{trimAddress(address)}

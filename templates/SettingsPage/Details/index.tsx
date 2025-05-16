@@ -4,7 +4,7 @@ type DetailsProps = {
   title: string;
   desciption?: string;
   colorImage?: string;
-  image: string;
+  image?: string;
   children: React.ReactNode;
 };
 
@@ -16,8 +16,8 @@ const Details = ({
   children,
 }: DetailsProps) => (
   <div className="">
-    <div className="mb-10 md:mb-8">
-      <div className="text-h4 border-b border-theme-stroke pb-4 md:text-title-1s">
+    <div className="mb-1 md:mb-8">
+      <div className="text-h4 border-b text-center border-theme-stroke pb-4 md:text-title-1s">
         {title}
       </div>
       {desciption && (
@@ -30,13 +30,13 @@ const Details = ({
           colorImage || 'bg-theme-purple-100'
         }`}
       >
-        <Image
+        {/* <Image
           className="w-full rounded-[1.25rem] md:min-h-[11.25rem] md:object-cover md:object-[70%_50%]"
           src={image}
           width={646}
           height={240}
           alt=""
-        />
+        /> */}
       </div>
     </div>
     {children}

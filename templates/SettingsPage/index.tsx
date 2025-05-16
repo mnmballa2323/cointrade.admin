@@ -46,7 +46,7 @@ const SettingsPage = () => {
             onChange={setActive}
             items={settings}
           />
-          <div className="w-66 shrink-0 space-y-3 2xl:w-46 lg:-mx-6 lg:flex lg:w-auto lg:space-x-3 lg:space-y-0 lg:overflow-auto lg:scroll-smooth lg:scrollbar-none lg:before:w-6 lg:before:shrink-0 lg:after:w-6 lg:after:shrink-0 md:hidden">
+          {/* <div className="w-66 shrink-0 space-y-3 2xl:w-46 lg:-mx-6 lg:flex lg:w-auto lg:space-x-3 lg:space-y-0 lg:overflow-auto lg:scroll-smooth lg:scrollbar-none lg:before:w-6 lg:before:shrink-0 lg:after:w-6 lg:after:shrink-0 md:hidden">
             {settings.map(item => (
               <button
                 className={`text-base-2 flex h-12 w-full items-center rounded-full px-6 text-theme-secondary shadow-[inset_0_0_0_0.0625rem_#EFEFEF] transition-all hover:bg-theme-on-surface-2 hover:text-theme-primary hover:shadow-transparent dark:shadow-[inset_0_0_0_0.0625rem_#272B30] lg:w-auto lg:shrink-0 ${
@@ -60,13 +60,14 @@ const SettingsPage = () => {
                 {item.title}
               </button>
             ))}
-          </div>
+          </div> */}
           <div className="grow pl-24 3xl:pl-15 lg:pl-0 lg:pt-15 md:pt-8">
-            {active.id === '0' && <Profile />}
+          <Profile />
+            {/* {active.id === '0' && <Profile />}
             {active.id === '1' && <Security />}
             {active.id === '2' && <Wallets />}
             {active.id === '4' && <Notifications />}
-            {active.id === '5' && <DeleteAccount />}
+            {active.id === '5' && <DeleteAccount />} */}
           </div>
         </div>
       </div>
