@@ -202,7 +202,35 @@ const UserDetails = ({ address }: { address: string }) => {
             </div>
             <span className="text-gray-500">40</span>
           </div>
+
+
+          <div className="flex justify-between items-center">
+            <div className="flex items-center space-x-2">
+              <TooltipEle title=" total amount of sell by the user.">
+                <QuestionMart
+                  className="fill-theme-secondary opacity-50 transition-[fill,opacity] group-hover:fill-theme-primary group-hover:opacity-100"
+                />
+              </TooltipEle>
+              <span className="font-semibold">Total Sold Value</span>
+            </div>
+            <span className="text-gray-500">$40</span>
+          </div>
+
+          <div className="flex justify-between items-center">
+            <div className="flex items-center space-x-2">
+              <TooltipEle title=" total amount of buy by the user.">
+                <QuestionMart
+                  className="fill-theme-secondary opacity-50 transition-[fill,opacity] group-hover:fill-theme-primary group-hover:opacity-100"
+                />
+              </TooltipEle>
+              <span className="font-semibold">Total Bought Value</span>
+            </div>
+            <span className="text-gray-500">$40</span>
+          </div>
+      
         </div>
+
+       
 
         {/* Action Buttons */}
         <div className="mt-6 flex space-x-4">
