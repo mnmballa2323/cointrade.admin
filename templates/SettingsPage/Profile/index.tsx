@@ -15,7 +15,7 @@ const Profile = ({}: ProfileProps) => {
   const [social, setSocial] = useState('');
 
   return (
-    <Details title="Profile">
+    <Details title="PROFILE">
       <div className="space-y-6">
         <div className="">
           <div className="text-base-2 mb-1">Avatar</div>
