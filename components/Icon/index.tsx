@@ -98,7 +98,7 @@ type IconProps = {
 
 const Icon = ({ className, name, fill }: IconProps) => (
   <svg
-    className={`inline-flex h-5 w-5 ${className || ''}`}
+    className={`inline-flex h-6 w-6 ${className || ''}`}
     width={24}
     height={24}
     viewBox="0 0 24 24"

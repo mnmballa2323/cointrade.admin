@@ -6,7 +6,7 @@ import ToggleTheme from '@/components/ToggleTheme';
 import Switch from '@/components/Switch';
 import NavLink from './NavLink';
 import { navigation } from '@/constants/navigation';
-import  { ConnectWalletMoblie } from '../ConnectWallet';
+import { ConnectWalletMoblie } from '../ConnectWallet';
 import Dvider from '../Divider';
 import { useAccount } from 'wagmi';
 
@@ -18,7 +18,7 @@ type SidebarProps = {
 
 const Sidebar = ({ className, visible, onClick }: SidebarProps) => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const { address } = useAccount()
+  const { address } = useAccount();
   const isLightMode = colorMode === 'light';
 
   const trimAddress = (address: string | undefined) => {
@@ -39,7 +39,11 @@ const Sidebar = ({ className, visible, onClick }: SidebarProps) => {
           visible ? 'px-7' : 'px-4'
         }`}
       >
-        <Link className="flex h-12 w-12 items-center justify-center" href="/" onClick={onClick}>
+        <Link
+          className="flex h-12 w-12 items-center justify-center"
+          href="/"
+          onClick={onClick}
+        >
           <Image
             className="w-10 opacity-100"
             src={
@@ -73,33 +77,40 @@ const Sidebar = ({ className, visible, onClick }: SidebarProps) => {
         }`}
       >
         {/* User Profile Section */}
-        <div className="flex justify-between content-center  items-center space-x-4 mb-4 mt-4">
-          <Link href={`settings`}>
-          <Image
-            src={'/images/user.png'}
-            width={45}
-            height={45}
-            className="rounded-full cursor-pointer"
-            alt="User Profile"
-          />
-          </Link>
-          <div className="flex flex-col items-end cursor-pointer">
-            <span className={`font-semibold text-sm ${visible ? '' : 'hidden'}`}>yourEmailAddress@gmail.com</span>
-            <span className={`font-semibold text-sm ${visible ? '' : 'hidden'}`}>{trimAddress(address)}
-              {/* <Icon
+        <Link href={`/user/${address}`} className="flex items-center">
+          <div className="mb-4 mt-4 flex content-center items-center justify-between space-x-4">
+            <Image
+              src={'/images/user.png'}
+              width={45}
+              height={45}
+              className="cursor-pointer rounded-full"
+              alt="User Profile"
+            />
+            <div className="flex cursor-pointer flex-col items-end">
+              <span
+                className={`text-sm font-semibold ${visible ? '' : 'hidden'}`}
+              >
+                yourEmailAddress@gmail.com
+              </span>
+              <span
+                className={`text-sm font-semibold ${visible ? '' : 'hidden'}`}
+              >
+                {trimAddress(address)}
+                {/* <Icon
                 className="ml-2 fill-theme-secondary opacity-50 transition-[fill,opacity] group-hover:fill-theme-primary group-hover:opacity-100"
                 name="copy"
               /> */}
-            </span>
+              </span>
+            </div>
           </div>
-        </div>
+        </Link>
 
         {/* Divider */}
         <Dvider />
 
         {/* Navigation Links */}
-        <div className="mb-auto flex flex-col space-y-2 mt-4">
-          {navigation.map((link) => (
+        <div className="mb-auto mt-4 flex flex-col space-y-2">
+          {navigation.map(link => (
             <NavLink
               title={link.title}
               icon={link.icon}
