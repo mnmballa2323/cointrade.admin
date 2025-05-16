@@ -4,8 +4,11 @@ import TransactionsDetails from "@/templates/TransactionDetails";
 import UserDetails from "@/templates/UserDeatils";
 import { NextPage } from "next";
 
+type Params = {
+  hash: string;
+};
 interface TxDetailsPageProps {
-  params: string;
+  params: Params;
 }
 
 const TxDetailsPage: NextPage<TxDetailsPageProps> = ({ params }) => {

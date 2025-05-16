@@ -1,8 +1,11 @@
 import UserDetails from "@/templates/UserDeatils";
 import { NextPage } from "next";
 
+type Params = {
+  userId: string;
+};
 interface UserDetailsPageProps {
-  params: string;
+  params: Params;
 }
 
 const UserDetailsPage: NextPage<UserDetailsPageProps> = ({ params }) => {
