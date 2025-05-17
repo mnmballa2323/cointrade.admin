@@ -8,7 +8,7 @@ export const navigation = [
   },
   {
     id: '4',
-    title: 'Crytros',
+    title: 'Coins',
     icon: 'trade',
     image: '/icons/Coins.svg',
     url: '/trade',

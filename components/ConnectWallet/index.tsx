@@ -29,10 +29,10 @@ export default function ConnectWallet({ className = '', ...props }) {
   }
   return (
     <>
-      {!address ? <button  className={`btn-primary ${className}`}    {...props} onClick={() => appkitModal.open()}>
+      {!address ? <button  className={`btn-primary cursor-pointer ${className}`}    {...props} onClick={() => appkitModal.open()}>
         Connect Wallet
       </button> : 
-        <div   className={`btn-primary flex-row gap-2 ${className}`} onClick={() => appkitModal.open()} >
+        <div className={`btn-primary flex-row gap-2 cursor-pointer ${className}`} onClick={() => appkitModal.open()} >
                <span>{handleNetworkLable()}</span>
             <span>{TrimWallet(address)}</span>
         </div>

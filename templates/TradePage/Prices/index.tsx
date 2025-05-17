@@ -1,3 +1,4 @@
+import React from 'react';
 import { LineChart, Line, ResponsiveContainer } from 'recharts';
 import Link from 'next/link';
 import Image from '@/components/Image';
@@ -13,11 +14,10 @@ const Prices = ({}: PricesProps) => {
     <div>
 
       <div className="text-title-1s text-center mb-6 md:mb-4 md:text-[1.125rem]">
-        Crytos
+        COINS
       </div>
-
       <Divider/>
-      <div className="-mx-3 space-y-2 md:-mx-2">
+      <div className="-mx-3 space-y-2 md:-mx-2 max-h-[550px] overflow-y-auto pr-2">
         {prices.map(item => (
           <div
             className="flex h-20 cursor-pointer items-center justify-between rounded-2xl border border-transparent px-3 transition-all hover:border-theme-stroke hover:shadow-[0_0_0.875rem_-0.25rem_rgba(0,0,0,0.05),0_2rem_3rem_-0.5rem_rgba(0,0,0,0.05)] md:h-18 md:px-2"

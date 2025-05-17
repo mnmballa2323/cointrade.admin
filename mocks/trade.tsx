@@ -347,4 +347,178 @@ export const prices = [
       },
     ],
   },
+   {
+    id: '5',
+    icon: '/images/bnb.png',
+    currencyFull: 'Binance BNB',
+    currencyShort: 'BNB',
+    price: '$650.1323',
+    percent: -22.14,
+    itemsCharts: [
+      {
+        name: '1',
+        price: 600,
+      },
+      {
+        name: '2',
+        price: 1500,
+      },
+      {
+        name: '3',
+        price: 2500,
+      },
+      {
+        name: '4',
+        price: 1200,
+      },
+      {
+        name: '5',
+        price: 2800,
+      },
+      {
+        name: '6',
+        price: 1900,
+      },
+      {
+        name: '7',
+        price: 2400,
+      },
+      {
+        name: '8',
+        price: 2000,
+      },
+      {
+        name: '9',
+        price: 2200,
+      },
+      {
+        name: '10',
+        price: 1700,
+      },
+      {
+        name: '11',
+        price: 1300,
+      },
+      {
+        name: '12',
+        price: 900,
+      },
+    ],
+  },
+   {
+    id: '5',
+    icon: '/images/bnb.png',
+    currencyFull: 'Binance BNB',
+    currencyShort: 'BNB',
+    price: '$650.1323',
+    percent: -22.14,
+    itemsCharts: [
+      {
+        name: '1',
+        price: 600,
+      },
+      {
+        name: '2',
+        price: 1500,
+      },
+      {
+        name: '3',
+        price: 2500,
+      },
+      {
+        name: '4',
+        price: 1200,
+      },
+      {
+        name: '5',
+        price: 2800,
+      },
+      {
+        name: '6',
+        price: 1900,
+      },
+      {
+        name: '7',
+        price: 2400,
+      },
+      {
+        name: '8',
+        price: 2000,
+      },
+      {
+        name: '9',
+        price: 2200,
+      },
+      {
+        name: '10',
+        price: 1700,
+      },
+      {
+        name: '11',
+        price: 1300,
+      },
+      {
+        name: '12',
+        price: 900,
+      },
+    ],
+  },
+   {
+    id: '5',
+    icon: '/images/bnb.png',
+    currencyFull: 'Binance BNB',
+    currencyShort: 'BNB',
+    price: '$650.1323',
+    percent: -22.14,
+    itemsCharts: [
+      {
+        name: '1',
+        price: 600,
+      },
+      {
+        name: '2',
+        price: 1500,
+      },
+      {
+        name: '3',
+        price: 2500,
+      },
+      {
+        name: '4',
+        price: 1200,
+      },
+      {
+        name: '5',
+        price: 2800,
+      },
+      {
+        name: '6',
+        price: 1900,
+      },
+      {
+        name: '7',
+        price: 2400,
+      },
+      {
+        name: '8',
+        price: 2000,
+      },
+      {
+        name: '9',
+        price: 2200,
+      },
+      {
+        name: '10',
+        price: 1700,
+      },
+      {
+        name: '11',
+        price: 1300,
+      },
+      {
+        name: '12',
+        price: 900,
+      },
+    ],
+  },
 ];
