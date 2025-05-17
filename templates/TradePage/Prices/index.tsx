@@ -12,11 +12,11 @@ type PricesProps = {};
 const Prices = ({}: PricesProps) => {
   return (
     <div>
-
+{/* 
       <div className="text-title-1s text-center mb-6 md:mb-4 md:text-[1.125rem]">
         COINS
       </div>
-      <Divider/>
+      <Divider/> */}
       <div className="-mx-3 space-y-2 md:-mx-2 max-h-[550px] overflow-y-auto pr-2">
         {prices.map(item => (
           <div

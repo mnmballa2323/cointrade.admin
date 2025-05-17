@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Icon from '@/components/Icon';
 import TooltipEle from '@/components/TooltipEle';
 import { Icon as QuestionMart } from '@chakra-ui/react';
+import { toast } from 'sonner';
 
 type DetailsProps = {
   token: string;
@@ -10,6 +11,10 @@ type DetailsProps = {
 const Details = ({token}: DetailsProps) => {
   const [showText, setShowText] = useState<boolean>(false);
 
+  const handleToast=()=>{
+    toast.success("Token delisted successfully")
+  }
+
   return (
     <div>
       <div className="mb-6 mt-6 rounded-xl border border-theme-stroke bg-theme-on-surface p-6">
@@ -17,13 +22,13 @@ const Details = ({token}: DetailsProps) => {
         <div className="flex space-x-4">
           <button
             className="rounded-lg bg-red-500 px-4 py-2 text-white hover:bg-red-600"
-            onClick={() => console.log('Delist Token')}
+            onClick={handleToast}
           >
             Delist Token
           </button>
           <button
             className="rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
-            onClick={() => console.log('Pause/Resume Token')}
+           onClick={handleToast}
           >
             Pause Token Trading
           </button>

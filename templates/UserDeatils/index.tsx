@@ -9,6 +9,7 @@ import TsxTable from './Tables/Txs';
 import AssetTalbe from './Tables/Assets';
 import Dvider from '@/components/Divider';
 import TooltipEle from '@/components/TooltipEle';
+import { toast } from "sonner"
 import { Icon as QuestionMart } from '@chakra-ui/react';
 
 const duration = [
@@ -50,13 +51,18 @@ const UserDetails = ({ address }: { address: string }) => {
 
   const handlePauseResumeTrading = () => {
     setIsTradingPaused(!isTradingPaused);
+    toast.success(isTradingPaused ? 'Trading Resumed' : 'Trading Paused');
   };
+
+  const handleToast=()=>{
+    toast.success("User Blacklisted")
+  }
 
   return (
     <Layout title="User Details">
       <div className="card rounded-lg p-6 shadow-md">
-        <h1 className="mb-6 text-2xl text-center font-bold">USER DETAILS</h1>
-        <Dvider />
+        {/* <h1 className="mb-6 text-2xl text-center font-bold">USER DETAILS</h1>
+        <Dvider /> */}
         {/* User Details Section */}
         <div className="space-y-4">
           {/* Address */}
@@ -244,7 +250,7 @@ const UserDetails = ({ address }: { address: string }) => {
           >
             {isTradingPaused ? 'Resume Trading' : 'Pause Trading'}
           </button>
-          <button className="rounded-lg bg-black px-4 py-2 text-white hover:bg-gray-800">
+          <button className="rounded-lg bg-black px-4 py-2 text-white hover:bg-gray-800" onClick={handleToast}>
             Blacklist User
           </button>
         </div>

@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
 import { headers } from 'next/headers'
 import { Providers } from './providers';
+import { Toaster } from "@/components/Toaster"
 import './globals.css';
 import ContextProvider from 'appkitContext';
 
@@ -112,7 +113,8 @@ export default async function RootLayout({
         className={`${inter.variable} ${interDisplay.variable} bg-theme-n-8 font-sans text-[0.9375rem] leading-[1.5rem] text-theme-primary antialiased`}
       >
         <ContextProvider cookies={cookies}>
-        <Providers>{children}</Providers>
+            <Providers>{children}</Providers>
+             <Toaster />
         </ContextProvider>
       </body>
     </html>
