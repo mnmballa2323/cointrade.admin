@@ -66,11 +66,19 @@ const UserDetails = ({ address }: { address: string }) => {
     toast.success("User Blacklisted")
   }
 
+    const goBack=()=>{
+    window.history.back();
+  }
   return (
     <Layout title="User Details">
       <div className="card rounded-lg p-6 shadow-md">
-        {/* <h1 className="mb-6 text-2xl text-center font-bold">USER DETAILS</h1>
-        <Dvider /> */}
+         <div className="flex items-center space-x-2 mb-2">
+            <button className="flex items-center space-x-2 text-gray-500" onClick={goBack}>
+              <Icon name="arrow-left" className="h-4 w-4 fill-theme-secondary" />
+              <span className="text-sm font-semibold">Back</span>
+            </button>
+            </div>
+        <Dvider />
         {/* User Details Section */}
         <div className="space-y-4">
           {/* Address */}
