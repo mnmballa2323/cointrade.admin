@@ -4,7 +4,7 @@ import Dvider from '@/components/Divider';
 import Layout from '@/components/Layout';
 import TooltipEle from '@/components/TooltipEle';
 import Icon from '@/components/Icon';
-import { Icon as QuestionMart } from '@chakra-ui/react';
+import { Divider, Icon as QuestionMart } from '@chakra-ui/react';
 import { useState } from 'react';
 
 const TransactionsDetails = ({ id }: { id: string }) => {
@@ -23,12 +23,24 @@ const TransactionsDetails = ({ id }: { id: string }) => {
     }
     return address;
   };
+  const goBack=()=>{
+    window.history.back();
+  }
 
   const creatorAddress = '0x85D70633b90e03e0276B98880286D0D055685ed7';
   return (
     <Layout title="Transactions">
       <div className="card flex-row">
-
+        <div className='mb-5'>
+          {/* back button */}
+          <div className="flex items-center space-x-2 mb-2">
+            <button className="flex items-center space-x-2 text-gray-500" onClick={goBack}>
+              <Icon name="arrow-left" className="h-4 w-4 fill-theme-secondary" />
+              <span className="text-sm font-semibold">Back</span>
+            </button>
+            </div>
+          <Divider/>
+        </div>
         <div className="space-y-4 mb-5">
           {/* Tx ID */}
           <div className="flex items-center justify-between">
