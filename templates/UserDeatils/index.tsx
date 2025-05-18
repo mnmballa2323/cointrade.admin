@@ -42,12 +42,20 @@ const UserDetails = ({ address }: { address: string }) => {
     setTimeout(() => setTooltipVisible(false), 2000); // Hide tooltip after 2 seconds
   };
 
+  // const trimAddress = (address: string) => {
+  //   if (typeof address === 'string' && address.length > 13) {
+  //     return `${address.slice(0, 6)}...${address.slice(-7)}`;
+  //   }
+  //   return address;
+  // };
+
   const trimAddress = (address: string) => {
-    if (typeof address === 'string' && address.length > 13) {
+    if (typeof window !== 'undefined' && window.innerWidth <= 768 && address.length > 13) {
       return `${address.slice(0, 6)}...${address.slice(-7)}`;
     }
     return address;
   };
+
 
   const handlePauseResumeTrading = () => {
     setIsTradingPaused(!isTradingPaused);

@@ -70,8 +70,6 @@ const UserCard = ({ user }: { user: UserCardProps }) => {
           More Details
         </button>
       </Link>
-
-
     </div>
   );
 };

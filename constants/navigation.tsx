@@ -13,13 +13,13 @@ export const navigation = [
     image: '/icons/Coins.svg',
     url: '/trade',
   },
-  // {
-  //   id: '2',
-  //   title: 'Agents',
-  //   icon: 'share',
-  //   image: '/icons/Agents.svg',
-  //   url: '/agents',
-  // },
+  {
+    id: '2',
+    title: 'Agents',
+    icon: 'share',
+    image: '/icons/Agents.svg',
+    url: '/agents',
+  },
   {
     id: '3',
     title: 'Transactions',
