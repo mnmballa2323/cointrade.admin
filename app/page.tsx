@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
-import UserPage from '@/templates/Users';
+import Dashboard from '@/templates/Dashboard';
 
 const Home: NextPage = () => {
-  return <UserPage />;
+  return <Dashboard />;
 };
 
 export default Home;
