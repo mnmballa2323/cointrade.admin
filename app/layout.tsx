@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
 import { headers } from 'next/headers'
 import { Providers } from './providers';
@@ -7,9 +6,14 @@ import { Toaster } from "@/components/Toaster"
 import './globals.css';
 import ContextProvider from 'appkitContext';
 
-const inter = Inter({
-  weight: ['400', '500', '600', '700'],
-  subsets: ['latin'],
+// Self-hosted (no Google Fonts requests)
+const inter = localFont({
+  src: [
+    { path: './fonts/Inter-400.woff2', weight: '400', style: 'normal' },
+    { path: './fonts/Inter-500.woff2', weight: '500', style: 'normal' },
+    { path: './fonts/Inter-600.woff2', weight: '600', style: 'normal' },
+    { path: './fonts/Inter-700.woff2', weight: '700', style: 'normal' },
+  ],
   display: 'block',
   variable: '--font-inter',
 });
@@ -61,7 +65,7 @@ export default async function RootLayout({
         {/* Twitter Summary card images must be at least 120x120px */}
         <meta
           name="twitter:image"
-          content="https://ui8-neutrade-0d83b7d91614.herokuapp.com/twitter-card.png"
+          content="/twitter-card.png"
         />
         {/* Open Graph data for Facebook */}
         <meta property="og:title" content="Neutrade – Crypto AI UI Kit" />
@@ -72,7 +76,7 @@ export default async function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://ui8-neutrade-0d83b7d91614.herokuapp.com/fb-og-image.png"
+          content="/fb-og-image.png"
         />
         <meta
           property="og:description"
@@ -88,7 +92,7 @@ export default async function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://ui8-neutrade-0d83b7d91614.herokuapp.com/linkedin-og-image.png"
+          content="/linkedin-og-image.png"
         />
         <meta
           property="og:description"
@@ -102,7 +106,7 @@ export default async function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://ui8-neutrade-0d83b7d91614.herokuapp.com/pinterest-og-image.png"
+          content="/pinterest-og-image.png"
         />
         <meta
           property="og:description"

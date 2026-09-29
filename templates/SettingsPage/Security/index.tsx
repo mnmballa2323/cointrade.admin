@@ -9,16 +9,16 @@ const Security = ({}: SecurityProps) => {
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [googleAuthenticator, setGoogleAuthenticator] = useState(true);
+  const [authenticatorApp, setAuthenticatorApp] = useState(true);
   const [addressVerification, setAddressVerification] = useState(false);
 
   const items = [
     {
-      title: 'Google Authenticator (2FA)',
+      title: 'Authenticator App (2FA)',
       content:
         'Use the Authenticator to get verification codes for better security.',
-      value: googleAuthenticator,
-      setValue: setGoogleAuthenticator,
+      value: authenticatorApp,
+      setValue: setAuthenticatorApp,
     },
     {
       title: 'E-mail address verification (2FA)',

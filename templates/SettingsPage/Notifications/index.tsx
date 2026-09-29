@@ -9,7 +9,7 @@ const Notifications = ({}: NotificationsProps) => {
   const [watchlist, setWatchlist] = useState(true);
   const [updates, setUpdates] = useState(false);
   const [payoutProcessed, setPayoutProcessed] = useState(false);
-  const [googleAuthenticator, setGoogleAuthenticator] = useState(true);
+  const [authenticatorApp, setAuthenticatorApp] = useState(true);
 
   const items = [
     {
@@ -39,10 +39,10 @@ const Notifications = ({}: NotificationsProps) => {
       setValue: setPayoutProcessed,
     },
     {
-      title: 'Google Authenticator (2FA)',
+      title: 'Authenticator App (2FA)',
       content: 'Receive important Neutrade promotions and updates.',
-      value: googleAuthenticator,
-      setValue: setGoogleAuthenticator,
+      value: authenticatorApp,
+      setValue: setAuthenticatorApp,
     },
   ];
 
