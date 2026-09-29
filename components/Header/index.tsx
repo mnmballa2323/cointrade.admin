@@ -9,7 +9,6 @@ import User from '@/components/User';
 import Image from '@/components/Image';
 import Notifications from './Notifications';
 import Search from './Search';
-import ConnectWallet from '../ConnectWallet';
 
 type HeaderProps = {
   title: string;
@@ -53,7 +52,6 @@ const Header = ({ title, visible, showMenu, onClickBurger }: HeaderProps) => {
             />
           </Link>
           <button className="group inline-flex items-center justify-between md:hidden">
-          {/* <ConnectWallet/> */}
             {/* <button
               className="btn-primary md:hidden ml-3"
               onClick={() => setVisibleModalTrade(true)}
@@ -73,7 +71,6 @@ const Header = ({ title, visible, showMenu, onClickBurger }: HeaderProps) => {
                 name="search"
               />
             </button>
-          <ConnectWallet className='sm:hidden'/>
   
        
   

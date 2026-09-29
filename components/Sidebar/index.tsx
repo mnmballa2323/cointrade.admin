@@ -6,9 +6,7 @@ import ToggleTheme from '@/components/ToggleTheme';
 import Switch from '@/components/Switch';
 import NavLink from './NavLink';
 import { navigation } from '@/constants/navigation';
-import { ConnectWalletMoblie } from '../ConnectWallet';
 import Dvider from '../Divider';
-import { useAccount } from 'wagmi';
 
 type SidebarProps = {
   className?: string;
@@ -18,13 +16,8 @@ type SidebarProps = {
 
 const Sidebar = ({ className, visible, onClick }: SidebarProps) => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const { address } = useAccount();
   const isLightMode = colorMode === 'light';
 
-  const trimAddress = (address: string | undefined) => {
-    if (!address) return '';
-    return `${address.slice(0, 6)}...${address.slice(-7)}`;
-  };
 
   return (
     <div
@@ -121,9 +114,6 @@ const Sidebar = ({ className, visible, onClick }: SidebarProps) => {
 
         {/* Footer Section */}
         <div className="mt-6 hidden flex-col space-y-1 border-t border-theme-stroke pt-4 md:flex">
-          <div className="w-full">
-            <ConnectWalletMoblie className="w-full" />
-          </div>
           <div className="group flex h-12 items-center rounded-xl px-4 transition-colors hover:bg-theme-on-surface-2 md:hover:bg-transparent">
             <Icon
               className="mr-4 shrink-0 fill-theme-secondary transition-colors group-hover:fill-theme-primary md:group-hover:fill-theme-secondary"

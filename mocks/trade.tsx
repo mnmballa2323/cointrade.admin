@@ -292,8 +292,8 @@ export const prices = [
   {
     id: '5',
     icon: '/images/bnb.png',
-    currencyFull: 'Binance BNB',
-    currencyShort: 'BNB',
+    currencyFull: 'Litecoin',
+    currencyShort: 'LTC',
     price: '$650.1323',
     percent: -22.14,
     itemsCharts: [
@@ -350,8 +350,8 @@ export const prices = [
    {
     id: '5',
     icon: '/images/bnb.png',
-    currencyFull: 'Binance BNB',
-    currencyShort: 'BNB',
+    currencyFull: 'Litecoin',
+    currencyShort: 'LTC',
     price: '$650.1323',
     percent: -22.14,
     itemsCharts: [
@@ -408,8 +408,8 @@ export const prices = [
    {
     id: '5',
     icon: '/images/bnb.png',
-    currencyFull: 'Binance BNB',
-    currencyShort: 'BNB',
+    currencyFull: 'Litecoin',
+    currencyShort: 'LTC',
     price: '$650.1323',
     percent: -22.14,
     itemsCharts: [
@@ -466,8 +466,8 @@ export const prices = [
    {
     id: '5',
     icon: '/images/bnb.png',
-    currencyFull: 'Binance BNB',
-    currencyShort: 'BNB',
+    currencyFull: 'Litecoin',
+    currencyShort: 'LTC',
     price: '$650.1323',
     percent: -22.14,
     itemsCharts: [

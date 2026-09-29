@@ -1,10 +1,8 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import { headers } from 'next/headers'
 import { Providers } from './providers';
 import { Toaster } from "@/components/Toaster"
 import './globals.css';
-import ContextProvider from 'appkitContext';
 
 // Self-hosted (no Google Fonts requests)
 const inter = localFont({
@@ -44,8 +42,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const headersObj = await headers();
-  const cookies = headersObj.get('cookie')
   return (
     <html lang="en">
       <head>
@@ -116,10 +112,8 @@ export default async function RootLayout({
       <body
         className={`${inter.variable} ${interDisplay.variable} bg-theme-n-8 font-sans text-[0.9375rem] leading-[1.5rem] text-theme-primary antialiased`}
       >
-        <ContextProvider cookies={cookies}>
-            <Providers>{children}</Providers>
-             <Toaster />
-        </ContextProvider>
+        <Providers>{children}</Providers>
+        <Toaster />
       </body>
     </html>
   );

@@ -168,7 +168,7 @@ const TransactionsDetails = ({ id }: { id: string }) => {
               </TooltipEle>
               <span className="font-semibold">Platform:</span>
             </div>
-            <span className="text-gray-500">Kucoin</span>
+            <span className="text-gray-500">Coinbase</span>
           </div>
 
           <div className="flex items-center justify-between">

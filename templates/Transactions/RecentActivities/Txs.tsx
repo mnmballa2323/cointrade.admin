@@ -12,7 +12,7 @@ const AllTsxTable = () => {
       type: 'Sell',
       amount: '100 BNB',
       wallet: '0x85D70633b90e03e0276B98880286D0D055685ed7',
-      exchange: 'Binance',
+      exchange: 'Coinbase',
       date: '2023-05-01',
     },
     {
@@ -20,7 +20,7 @@ const AllTsxTable = () => {
       type: 'Buy',
       amount: '1 BTC',
       wallet: '0x85D70633b90e03e0276B98880286D0D055685ed7',
-      exchange: 'Kucoin',
+      exchange: 'Coinbase',
       date: '2023-05-01',
     },
     {
@@ -28,7 +28,7 @@ const AllTsxTable = () => {
       type: 'Buy',
       amount: '100 ETH',
       wallet: '0x85D70633b90e03e0276B98880286D0D055685ed7',
-      exchange: 'Kucoin',
+      exchange: 'Coinbase',
       date: '2023-05-01',
     },
     {
@@ -36,7 +36,7 @@ const AllTsxTable = () => {
       type: 'Buy',
       amount: '100 ETH',
       wallet: '0x85D70633b90e03e0276B98880286D0D055685ed7',
-      exchange: 'Kucoin',
+      exchange: 'Coinbase',
       date: '2023-05-01',
     },
     {
@@ -44,7 +44,7 @@ const AllTsxTable = () => {
       type: 'Buy',
       amount: '100 ETH',
       wallet: '0x85D70633b90e03e0276B98880286D0D055685ed7',
-      exchange: 'Kucoin',
+      exchange: 'Coinbase',
       date: '2023-05-01',
     },
     {
@@ -52,7 +52,7 @@ const AllTsxTable = () => {
       type: 'Buy',
       amount: '100 ETH',
       wallet: '0x85D70633b90e03e0276B98880286D0D055685ed7',
-      exchange: 'Kucoin',
+      exchange: 'Coinbase',
       date: '2023-05-01',
     },
     {
@@ -60,7 +60,7 @@ const AllTsxTable = () => {
       type: 'Buy',
       amount: '100 ETH',
       wallet: '0x85D70633b90e03e0276B98880286D0D055685ed7',
-      exchange: 'Kucoin',
+      exchange: 'Coinbase',
       date: '2023-05-01',
     },
     {
@@ -68,7 +68,7 @@ const AllTsxTable = () => {
       type: 'Buy',
       amount: '100 ETH',
       wallet: '0x85D70633b90e03e0276B98880286D0D055685ed7',
-      exchange: 'Kucoin',
+      exchange: 'Coinbase',
       date: '2023-05-01',
     },
     {
@@ -76,7 +76,7 @@ const AllTsxTable = () => {
       type: 'Buy',
       amount: '100 ETH',
       wallet: '0x85D70633b90e03e0276B98880286D0D055685ed7',
-      exchange: 'Kucoin',
+      exchange: 'Coinbase',
       date: '2023-05-01',
     },
   ];

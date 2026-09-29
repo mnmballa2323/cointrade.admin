@@ -17,10 +17,6 @@
     "@emotion/styled": "^11.11.5",
     "@headlessui/react": "^2.0.3",
     "@headlessui/tailwindcss": "^0.2.0",
-    "@reown/appkit": "^1.7.4",
-    "@reown/appkit-adapter-wagmi": "^1.7.4",
-    "@tanstack/react-query": "^5.75.7",
-    "@wagmi/core": "^2.17.1",
     "add": "^2.0.6",
     "framer-motion": "^11.1.7",
     "next": "14.2.2",
@@ -36,8 +32,6 @@
     "sonner": "^2.0.3",
     "tailwind-merge": "^2.3.0",
     "tailwind-scrollbar": "^3.1.0",
-    "viem": "^2.29.2",
-    "wagmi": "^2.15.2",
     "yarn": "^1.22.22"
   },
   "devDependencies": {

@@ -6,21 +6,21 @@ const TsxTable = () => {
       id: '123abc456def789',
       type: 'Sell',
       amount: '100 BNB',
-      exchange: 'Binance',
+      exchange: 'Coinbase',
       date: '2023-05-01'
     },
     {
       id: '123abc456def789',
       type: 'Buy',
       amount: '1 BTC',
-      exchange: 'Kucoin',
+      exchange: 'Coinbase',
       date: '2023-05-01'
     },
     {
       id: '123abc456def789',
       type: 'Buy',
       amount: '100 ETH',
-      exchange: 'Kucoin',
+      exchange: 'Coinbase',
       date: '2023-05-01'
     }
   ]

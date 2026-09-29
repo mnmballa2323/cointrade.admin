@@ -51,8 +51,8 @@ export const selectAsset = [
   {
     id: '3',
     logo: '/images/bnb.png',
-    currency: 'Binance',
-    currencyShort: 'BNB',
+    currency: 'Litecoin',
+    currencyShort: 'LTC',
   },
   {
     id: '4',
