@@ -39,5 +39,4 @@ feedback and contributions are welcome!
 
 ## Deploy
 
-Deployed on the Liberty Center One private cloud (Royal Oak, Michigan). See
-`DEPLOY.md` in the `cointrade` repository.
+Deployed on AWS. See `DEPLOY.md` in the `cointrade` repository.
