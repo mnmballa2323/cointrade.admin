@@ -1,8 +1,2 @@
-import type { NextPage } from 'next';
-import VerifyCodePage from '@/templates/VerifyCodePage';
-
-const VerifyCode: NextPage = () => {
-  return <VerifyCodePage />;
-};
-
-export default VerifyCode;
+import { redirect } from '@/platform/navigation';
+export default function CoinbaseSignIn(){ redirect((process.env.NEXT_PUBLIC_COINTRADE_URL || 'http://localhost:3002') + '/login'); }

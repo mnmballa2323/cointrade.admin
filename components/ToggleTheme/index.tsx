@@ -1,4 +1,4 @@
-import { useColorMode } from '@chakra-ui/color-mode';
+import { useColorMode } from '@/components/NativeUI';
 import Icon from '@/components/Icon';
 import { useEffect } from 'react';
 

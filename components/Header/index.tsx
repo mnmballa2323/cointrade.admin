@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { useColorMode } from '@chakra-ui/react';
-import Link from 'next/link';
+import { useRouter } from '@/platform/navigation';
+import { useColorMode } from '@/components/NativeUI';
+import Link from '@/platform/navigation';
 import Icon from '@/components/Icon';
 import Modal from '@/components/Modal';
 import Trade from '@/components/Trade';
@@ -43,8 +43,8 @@ const Header = ({ title, visible, showMenu, onClickBurger }: HeaderProps) => {
               className="w-9 opacity-100"
               src={
                 colorMode === 'light'
-                  ? '/images/Cointrade.png'
-                  : '/images/Cointrade.png'
+                  ? '/cointrade-icon.png'
+                  : '/cointrade-icon.png'
               }
               width={36}
               height={36}

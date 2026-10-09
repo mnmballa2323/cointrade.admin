@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AreaChart, Area, ResponsiveContainer } from 'recharts';
+import { AreaPlot } from '@/components/NativeCharts';
 import Icon from '@/components/Icon';
 import CurrencyFormat from '@/components/CurrencyFormat';
 import Image from '@/components/Image';
@@ -50,34 +50,7 @@ const BestPrice = ({}: BestPriceProps) => {
             <Percent className="text-base-2" value={12.32} />
           </div>
           <div className="-mx-6 my-2 h-32 md:-mx-4">
-            <ResponsiveContainer width="100%" height="100%">
-              <AreaChart
-                width={730}
-                height={250}
-                data={chartBestToBuy}
-                margin={{
-                  top: 0,
-                  right: 0,
-                  left: 0,
-                  bottom: 0,
-                }}
-              >
-                <defs>
-                  <linearGradient id="color" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#32AE60" stopOpacity={0.15} />
-                    <stop offset="95%" stopColor="#32AE60" stopOpacity={0} />
-                  </linearGradient>
-                </defs>
-                <Area
-                  type="linear"
-                  dataKey="price"
-                  stroke="#32AE60"
-                  strokeWidth={2}
-                  fillOpacity={1}
-                  fill="url(#color)"
-                />
-              </AreaChart>
-            </ResponsiveContainer>
+            <AreaPlot data={chartBestToBuy} dataKey="price" color="#32AE60" height="100%" compact />
           </div>
           <div className="text-caption-1 mb-4 flex items-center font-medium text-theme-secondary">
             <div className="mr-3">

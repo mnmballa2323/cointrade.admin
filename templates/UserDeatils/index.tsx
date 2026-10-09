@@ -10,7 +10,7 @@ import AssetTalbe from './Tables/Assets';
 import Dvider from '@/components/Divider';
 import TooltipEle from '@/components/TooltipEle';
 import { toast } from "sonner"
-import { Icon as QuestionMart } from '@chakra-ui/react';
+import { Icon as QuestionMart } from '@/components/NativeUI';
 
 const duration = [
   {

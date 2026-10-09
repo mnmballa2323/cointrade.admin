@@ -1,5 +1,5 @@
 import { ChangeEventHandler } from 'react';
-import { useColorMode } from '@chakra-ui/color-mode';
+import { useColorMode } from '@/components/NativeUI';
 import TextareaAutosize from 'react-textarea-autosize';
 import Icon from '@/components/Icon';
 import Image from '@/components/Image';

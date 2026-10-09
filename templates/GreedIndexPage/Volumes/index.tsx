@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { AreaChart, Area, XAxis, ResponsiveContainer, Tooltip } from 'recharts';
-import { useColorMode } from '@chakra-ui/color-mode';
+import { AreaPlot, BarPlot, RatioPlot } from '@/components/NativeCharts';
+import { useColorMode } from '@/components/NativeUI';
 import Card from '@/components/Card';
 import CurrencyFormat from '@/components/CurrencyFormat';
 
@@ -57,55 +57,7 @@ const Volumes = ({}: VolumesProps) => {
       options={duration}
     >
       <div className="-mb-5 mt-4 h-[22.6rem] md:-mb-3">
-        <ResponsiveContainer width="100%" height="100%">
-          <AreaChart
-            width={730}
-            height={250}
-            data={chartVolumes}
-            margin={{ top: 0, right: 6, left: 6, bottom: 0 }}
-          >
-            <defs>
-              <linearGradient id="color" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#32AE60" stopOpacity={0.15} />
-                <stop offset="95%" stopColor="#32AE60" stopOpacity={0} />
-              </linearGradient>
-            </defs>
-            <XAxis
-              dataKey="name"
-              tickLine={false}
-              stroke={isDarkMode ? '#272B30' : '#EFEFEF'}
-              tick={{
-                fontSize: 12,
-                fontWeight: '500',
-                opacity: 0.75,
-                fill: '#6F767E',
-              }}
-              dy={4}
-            />
-            <Tooltip
-              content={<CustomTooltip />}
-              cursor={{
-                stroke: isDarkMode ? '#272B30' : '#EFEFEF',
-                strokeWidth: 1,
-                fill: 'transparent',
-              }}
-              wrapperStyle={{ outline: 'none' }}
-            />
-            <Area
-              type="linear"
-              dataKey="price"
-              stroke="#32AE60"
-              strokeWidth={4}
-              fillOpacity={1}
-              fill="url(#color)"
-              activeDot={{
-                r: 6,
-                stroke: isDarkMode ? '#1A1D1F' : '#FCFCFC',
-                strokeWidth: 3,
-              }}
-            />
-          </AreaChart>
-        </ResponsiveContainer>
+        <AreaPlot data={chartVolumes} dataKey="price" color="#32AE60" height="100%" />
       </div>
     </Card>
   );

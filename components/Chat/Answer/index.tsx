@@ -1,4 +1,4 @@
-import { useColorMode } from '@chakra-ui/react';
+import { useColorMode } from '@/components/NativeUI';
 import Image from '@/components/Image';
 
 type AnswerProps = {

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { default as NextImage, ImageProps } from 'next/image';
+import { default as NextImage, ImageProps } from '@/platform/image';
 
 const Image = ({ className, ...props }: ImageProps) => {
   const [loaded, setLoaded] = useState<boolean>(false);

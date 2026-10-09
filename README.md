@@ -1,42 +1,7 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with
-[`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Cointrade Admin
 
-## Getting Started
+React and TypeScript with original native browser compilation and routing. AWS-only infrastructure, Coinbase-only customer authentication and exchange access, pure MIT/Apache-2.0 source reuse.
 
-First, run the development server:
+See NATIVE_WEB.md for build, stylesheet, notices and development instructions. Run npm ci --ignore-scripts, npm run typecheck, npm run build and npm run dev. Frontend supports npm test. The development watcher recompiles sources; refresh your browser after changes. Local frontend uses PORT=3002 and admin PORT=3000 through the workspace manager.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the
-result.
-
-You can start editing the page by modifying `app/page.tsx`. The page
-auto-updates as you edit the file.
-
-This project uses
-[`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to
-load Inter from self-hosted font files in `app/fonts`.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out
-[the Next.js GitHub repository](https://github.com/vercel/next.js/) - your
-feedback and contributions are welcome!
-
-## Deploy
-
-Deployed on AWS. See `DEPLOY.md` in the `cointrade` repository.
+Full release remains blocked by source/asset/runtime/container review and pending AWS/Coinbase configuration. The admin dashboard is illustrative sample data.

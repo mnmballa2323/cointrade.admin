@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Link from 'next/link';
+import Link from '@/platform/navigation';
 import Card from '@/components/Card';
 import Image from '@/components/Image';
 import Icon from '@/components/Icon';

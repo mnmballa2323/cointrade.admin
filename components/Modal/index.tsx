@@ -4,7 +4,7 @@ import {
   DialogPanel,
   Transition,
   TransitionChild,
-} from '@headlessui/react';
+} from '@/platform/primitives';
 import { twMerge } from 'tailwind-merge';
 import Icon from '@/components/Icon';
 import ButtonBack from '@/components/ButtonBack';

@@ -1,14 +1,6 @@
 import { useState } from 'react';
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-  Cell,
-} from 'recharts';
-import { useColorMode } from '@chakra-ui/color-mode';
+import { AreaPlot, BarPlot, RatioPlot } from '@/components/NativeCharts';
+import { useColorMode } from '@/components/NativeUI';
 import Card from '@/components/Card';
 import CurrencyFormat from '@/components/CurrencyFormat';
 import Percent from '@/components/Percent';
@@ -73,47 +65,7 @@ const TotalBalance = ({}: TotalBalanceProps) => {
         <Percent className="text-title-1s ml-1" value={85.66} />
       </div>
       <div className="-mb-6 mt-12 h-[17.5rem] md:-mb-2 md:mt-4">
-        <ResponsiveContainer width="100%" height="100%">
-          <BarChart
-            width={150}
-            height={40}
-            data={chartTotalBalance}
-            margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
-            barSize={64}
-          >
-            <CartesianGrid
-              horizontal={false}
-              stroke={isDarkMode ? '#272B30' : '#EFEFEF'}
-            />
-            <XAxis
-              dataKey="name"
-              tickLine={false}
-              stroke={isDarkMode ? '#272B30' : '#EFEFEF'}
-              tick={{
-                fontSize: 12,
-                fontWeight: '500',
-                opacity: 0.75,
-                fill: '#6F767E',
-              }}
-              dy={4}
-            />
-            <Tooltip
-              content={<CustomTooltip />}
-              cursor={{
-                fill: isDarkMode ? '#222628' : '#F6F6F6',
-              }}
-              wrapperStyle={{ outline: 'none' }}
-            />
-            <Bar dataKey="price" fill="#B5E4CA" radius={2}>
-              {chartTotalBalance.map((entry, index) => (
-                <Cell
-                  key={`cell-${index}`}
-                  fill={index > 2 ? '#B5E4CA' : '#0C68E9'}
-                />
-              ))}
-            </Bar>
-          </BarChart>
-        </ResponsiveContainer>
+        <BarPlot data={chartTotalBalance} series={[{ key: 'price', color: '#B5E4CA' }]} />
       </div>
     </Card>
   );

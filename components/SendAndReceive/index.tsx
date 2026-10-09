@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from '@/components/NativeUI';
 import TabsSame from '@/components/TabsSame';
 import Modal from '@/components/Modal';
 import Send from './Send';

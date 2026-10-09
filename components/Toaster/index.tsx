@@ -1,13 +1,13 @@
 "use client"
 
-import { useColorMode } from "@chakra-ui/react"
-import { useTheme } from "next-themes"
+import { useColorMode } from '@/components/NativeUI'
+
 import { Toaster as Sonner } from "sonner"
 
 type ToasterProps = React.ComponentProps<typeof Sonner>
 
 const Toaster = ({ ...props }: ToasterProps) => {
-  const { theme = "system" } = useTheme()
+
   const { colorMode } = useColorMode();
 
   return (

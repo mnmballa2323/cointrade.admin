@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 import { UserCardProps } from '../types';
 import Icon from '@/components/Icon';
-import Link from 'next/link';
+import Link from '@/platform/navigation';
 import { Tooltip } from 'react-tooltip';
 import TooltipEle from '@/components/TooltipEle';
-import { Divider } from '@chakra-ui/react';
+import { Divider } from '@/components/NativeUI';
 
 const UserCard = ({ user }: { user: UserCardProps }) => {
   const [tooltipVisible, setTooltipVisible] = useState(false);

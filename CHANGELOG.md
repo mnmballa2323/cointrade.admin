@@ -1,0 +1,7 @@
+## 2026-10-09 — Remaining prohibited dependency removal and native runtime paths
+
+- Removed all 56 remaining prohibited application lockfile entries. Current inventory: 0 prohibited, 166 unreviewed, 8 reviewed additions; release remains blocked by source/asset/image/runtime review, including incompatible licensing in installed Node.
+- Replaced Express middleware and LangChain/AWS SDK branches with original native HTTP and Bedrock REST/SigV4 implementations. Added DocumentDB-only connection-string adapter and exact-source-reviewed MIT ws runtime. Optional native accelerators stay excluded.
+- Replaced Next.js, headless/motion/Radix controls, Tailwind tooling and web test/bundler tooling with original TypeScript browser compilation, native controls/navigation and Node tests. Updated Docker/CodeBuild/local startup. Removed unused MongoDB binary, pnpm and stale build/dependency trees; preserved local database data.
+- Verification: 403 backend tests, 12 frontend tests, four audit tests, native protocol/web checks, provider and approved-addition checks pass. Backend build and both web type checks pass. Homepage/login/legal/admin preview checked in browser; old Next build overlay resolved at localhost:3002.
+- Web rendering is now client-side; image optimization, framework animation timing, automatic utility CSS generation and API compression are not retained. Production proxy/client-IP behavior needs review. No deployment, live provider certification or real trade occurred.

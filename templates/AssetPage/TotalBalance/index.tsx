@@ -1,5 +1,5 @@
-import { AreaChart, Area, ResponsiveContainer, XAxis, Tooltip } from 'recharts';
-import { useColorMode } from '@chakra-ui/react';
+import { AreaPlot, BarPlot, RatioPlot } from '@/components/NativeCharts';
+import { useColorMode } from '@/components/NativeUI';
 import CurrencyFormat from '@/components/CurrencyFormat';
 import Image from '@/components/Image';
 import Percent from '@/components/Percent';
@@ -52,60 +52,7 @@ const TotalBalance = ({}: TotalBalanceProps) => {
       <CurrencyFormat className="text-h2 mb-2" value={3273.7} currency="$" />
       <Percent className="text-base-2 mb-6 md:mb-0" value={12.32} />
       <div className="h-[18.5rem] md:h-[17.25rem]">
-        <ResponsiveContainer width="100%" height="100%">
-          <AreaChart
-            width={730}
-            height={250}
-            data={chartTotalBalance1}
-            margin={{
-              top: 0,
-              right: 7,
-              left: 7,
-              bottom: 0,
-            }}
-          >
-            <defs>
-              <linearGradient id="color" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#9CC5FF" stopOpacity={0.13} />
-                <stop offset="95%" stopColor="#B9D6FF" stopOpacity={0} />
-              </linearGradient>
-            </defs>
-            <XAxis
-              dataKey="name"
-              tickLine={false}
-              stroke={isDarkMode ? '#272B30' : '#EFEFEF'}
-              tick={{
-                fontSize: 12,
-                fontWeight: '500',
-                opacity: 0.75,
-                fill: '#6F767E',
-              }}
-              dy={4}
-            />
-            <Tooltip
-              content={<CustomTooltip />}
-              cursor={{
-                stroke: isDarkMode ? '#272B30' : '#EFEFEF',
-                strokeWidth: 1,
-                fill: 'transparent',
-              }}
-              wrapperStyle={{ outline: 'none' }}
-            />
-            <Area
-              type="monotone"
-              dataKey="price"
-              stroke="#0C68E9"
-              strokeWidth={2}
-              fillOpacity={1}
-              fill="url(#color)"
-              activeDot={{
-                r: 7,
-                stroke: isDarkMode ? '#1A1D1F' : '#FCFCFC',
-                strokeWidth: 3,
-              }}
-            />
-          </AreaChart>
-        </ResponsiveContainer>
+        <AreaPlot data={chartTotalBalance1} dataKey="price" color="#0C68E9" height="100%" />
       </div>
     </div>
   );

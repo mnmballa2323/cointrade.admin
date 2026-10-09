@@ -1,17 +1,8 @@
 'use client';
 import React from 'react';
 import Layout from '@/components/Layout';
-import Link from 'next/link';
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ResponsiveContainer,
-  LineChart,
-  Line,
-} from 'recharts';
+import Link from '@/platform/navigation';
+import { AreaPlot, BarPlot, RatioPlot } from '@/components/NativeCharts';
 
 const Dashboard = () => {
   // Example data for the Total Volume chart
@@ -37,6 +28,7 @@ const Dashboard = () => {
 
   return (
     <Layout title="Dashboard">
+      <p role="status" style={{marginBottom:20,color:"var(--secondary)"}}>Illustrative admin preview. Metrics below are sample data; no live AWS or Coinbase administration is connected.</p>
       <div className="mt-3 grid grid-cols-3 gap-6 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
         {/* Total Users */}
         <Link
@@ -105,14 +97,7 @@ const Dashboard = () => {
           <h3 className="mb-4 text-lg font-semibold text-theme-primary">
             Total Volume Chart
           </h3>
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={volumeData}>
-              <XAxis dataKey="name" stroke="#8884d8" />
-              <YAxis />
-              <Tooltip />
-              <Bar dataKey="volume" fill="#82ca9d" />
-            </BarChart>
-          </ResponsiveContainer>
+          <BarPlot data={volumeData} series={[{ key: 'volume', color: '#82ca9d' }]} />
         </div>
       </div>
 
@@ -122,14 +107,7 @@ const Dashboard = () => {
           <h3 className="mb-4 text-lg font-semibold text-theme-primary">
             User Growth
           </h3>
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={userGrowthData}>
-              <XAxis dataKey="month" stroke="#8884d8" />
-              <YAxis />
-              <Tooltip />
-              <Line type="monotone" dataKey="users" stroke="#82ca9d" />
-            </LineChart>
-          </ResponsiveContainer>
+          <AreaPlot data={userGrowthData} dataKey="users" color="#82ca9d" height="100%" />
         </div>
       </div>
     </Layout>

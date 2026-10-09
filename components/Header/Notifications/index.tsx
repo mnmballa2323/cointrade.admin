@@ -1,5 +1,5 @@
-import { Menu, MenuButton, MenuItems, Transition } from '@headlessui/react';
-import Link from 'next/link';
+import { Menu, MenuButton, MenuItems, Transition } from '@/platform/primitives';
+import Link from '@/platform/navigation';
 import Icon from '@/components/Icon';
 import Image from '@/components/Image';
 

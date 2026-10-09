@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { NextPage } from '@/platform/types';
 import NotFoundPage from '@/templates/NotFoundPage';
 
 const NotFound: NextPage = () => {

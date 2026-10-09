@@ -1,6 +1,6 @@
 
 import Agents from '@/templates/AgentDetails';
-import { NextPage } from 'next';
+import { NextPage } from '@/platform/types';
 
 
 type Params = {

@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
+import { usePathname } from '@/platform/navigation';
+import Link from '@/platform/navigation';
 import Icon from '@/components/Icon';
 import Image from '@/components/Image';
 
@@ -21,7 +21,7 @@ const NavLink = ({
   visible,
   imageurl,
 }: NavLinkProps) => {
-  const CreatedTag = url ? Link : 'button';
+  const CreatedTag = (url ? Link : 'button') as React.ElementType<any>;
   const pathname = usePathname();
   const active = pathname === url;
   const notification = url === '/notification';

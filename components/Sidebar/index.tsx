@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { useColorMode } from '@chakra-ui/react';
+import Link from '@/platform/navigation';
+import { useColorMode } from '@/components/NativeUI';
 import Image from '@/components/Image';
 import Icon from '@/components/Icon';
 import ToggleTheme from '@/components/ToggleTheme';
@@ -41,8 +41,8 @@ const Sidebar = ({ className, visible, onClick }: SidebarProps) => {
             className="w-10 opacity-100"
             src={
               colorMode === 'light'
-                ? '/images/Cointrade.png'
-                : '/images/Cointrade.png'
+                ? '/cointrade-icon.png'
+                : '/cointrade-icon.png'
             }
             width={40}
             height={40}

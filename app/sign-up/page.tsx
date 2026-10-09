@@ -1,8 +1,2 @@
-import type { NextPage } from 'next';
-import SignUpPage from '@/templates/SignUpPage';
-
-const SignUp: NextPage = () => {
-  return <SignUpPage />;
-};
-
-export default SignUp;
+import { redirect } from '@/platform/navigation';
+export default function CoinbaseSignIn(){ redirect((process.env.NEXT_PUBLIC_COINTRADE_URL || 'http://localhost:3002') + '/login'); }

@@ -1,4 +1,4 @@
-import { Switch as SwitchReact } from '@headlessui/react';
+import { Switch as SwitchReact } from '@/platform/primitives';
 
 type SwitchProps = {
   className?: string;

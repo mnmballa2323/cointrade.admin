@@ -1,5 +1,5 @@
-import { BarChart, Bar, XAxis, Tooltip, ResponsiveContainer } from 'recharts';
-import { useColorMode } from '@chakra-ui/react';
+import { AreaPlot, BarPlot, RatioPlot } from '@/components/NativeCharts';
+import { useColorMode } from '@/components/NativeUI';
 import CurrencyFormat from '@/components/CurrencyFormat';
 import Image from '@/components/Image';
 
@@ -101,43 +101,7 @@ const PrimaryBalance = ({}: PrimaryBalanceProps) => {
         </div>
       </div>
       <div className="h-[17.625rem]">
-        <ResponsiveContainer width="100%" height="100%">
-          <BarChart
-            width={500}
-            height={300}
-            data={chartPrimaryBalance}
-            margin={{
-              top: 0,
-              right: 0,
-              left: 0,
-              bottom: 0,
-            }}
-            barGap={12}
-            barSize={20}
-          >
-            <XAxis
-              dataKey="name"
-              tickLine={false}
-              stroke={isDarkMode ? '#272B30' : '#EFEFEF'}
-              tick={{
-                fontSize: 12,
-                fontWeight: '500',
-                opacity: 0.75,
-                fill: '#6F767E',
-              }}
-              dy={4}
-            />
-            <Tooltip
-              content={<CustomTooltip />}
-              cursor={{
-                fill: isDarkMode ? '#222628' : '#F6F6F6',
-              }}
-              wrapperStyle={{ outline: 'none' }}
-            />
-            <Bar dataKey="ETH" fill="#B981DA" radius={2} />
-            <Bar dataKey="USD" fill="#0C68E9" radius={2} />
-          </BarChart>
-        </ResponsiveContainer>
+        <BarPlot data={chartPrimaryBalance} series={[{ key: 'ETH', color: '#B981DA' }, { key: 'USD', color: '#0C68E9' }]} />
       </div>
     </div>
   );

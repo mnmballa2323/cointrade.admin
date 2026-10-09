@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '@/platform/navigation';
 import Select from '@/components/Select';
 import Icon from '@/components/Icon';
 import Tooltip from '@/components/Tooltip';

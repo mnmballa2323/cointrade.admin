@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { useColorMode } from '@chakra-ui/react';
+import Link from '@/platform/navigation';
+import { useColorMode } from '@/components/NativeUI';
 import Image from '@/components/Image';
 
 type LoginProps = {

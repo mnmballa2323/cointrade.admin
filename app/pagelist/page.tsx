@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { NextPage } from '@/platform/types';
 import PageListPage from '@/templates/PageListPage';
 
 const PageList: NextPage = () => {

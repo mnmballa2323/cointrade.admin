@@ -4,7 +4,7 @@ import Dvider from '@/components/Divider';
 import Layout from '@/components/Layout';
 import TooltipEle from '@/components/TooltipEle';
 import Icon from '@/components/Icon';
-import { Divider, Icon as QuestionMart } from '@chakra-ui/react';
+import { Divider, Icon as QuestionMart } from '@/components/NativeUI';
 import { useState } from 'react';
 
 const TransactionsDetails = ({ id }: { id: string }) => {

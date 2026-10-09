@@ -1,4 +1,4 @@
-import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
+import { AreaPlot, BarPlot, RatioPlot } from '@/components/NativeCharts';
 import CurrencyFormat from '@/components/CurrencyFormat';
 import Percent from '@/components/Percent';
 
@@ -22,28 +22,7 @@ const AvailableBalance = ({}: AvailableBalanceProps) => (
     <CurrencyFormat className="text-h3" currency="$" value={3200.8} />
     <Percent className="text-base-2 mb-6" value={12.32} />
     <div className="relative mx-auto h-[15.75rem] w-[15.75rem]">
-      <ResponsiveContainer width="100%" height="100%">
-        <PieChart width={290} height={290}>
-          <Pie
-            data={data}
-            cx={122}
-            cy={122}
-            innerRadius={70}
-            outerRadius={124}
-            labelLine={false}
-            dataKey="value"
-            paddingAngle={2}
-            stroke="transparent"
-          >
-            {data.map((entry, index) => (
-              <Cell
-                key={`cell-${index}`}
-                fill={COLORS[index % COLORS.length]}
-              />
-            ))}
-          </Pie>
-        </PieChart>
-      </ResponsiveContainer>
+      <RatioPlot data={data} colors={COLORS} unit="" showLabels={false} />
       <div className="text-base-1s absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
         0.5 BTC
       </div>

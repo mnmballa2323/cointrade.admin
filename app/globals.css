@@ -108,3 +108,6 @@
     @apply !text-theme-tertiary;
   }
 }
+
+/* Use fonts supplied by the user's OS; do not distribute third-party font files. */
+:root { --font-inter: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; --font-inter-display: var(--font-inter); }

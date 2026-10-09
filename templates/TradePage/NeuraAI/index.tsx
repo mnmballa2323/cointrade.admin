@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Link from 'next/link';
+import Link from '@/platform/navigation';
 import Icon from '@/components/Icon';
 import Message from '@/components/Message';
 import Details from './Details';

@@ -1,5 +1,5 @@
-import { LineChart, Line, ResponsiveContainer } from 'recharts';
-import Link from 'next/link';
+import { AreaPlot, BarPlot, RatioPlot } from '@/components/NativeCharts';
+import Link from '@/platform/navigation';
 import Card from '@/components/Card';
 import Image from '@/components/Image';
 import Percent from '@/components/Percent';
@@ -39,27 +39,7 @@ const TopTokens = ({}: TopTokensProps) => {
               </div>
             </div>
             <div className="mx-auto h-9 w-18 md:w-16">
-              <ResponsiveContainer width="100%" height="100%">
-                <LineChart
-                  width={300}
-                  height={100}
-                  data={item.itemsCharts}
-                  margin={{
-                    top: 0,
-                    right: 0,
-                    left: 0,
-                    bottom: 0,
-                  }}
-                >
-                  <Line
-                    type="linear"
-                    dataKey="price"
-                    dot={false}
-                    stroke={item.percent > 0 ? '#32AE60' : '#F04D1A'}
-                    strokeWidth={2}
-                  />
-                </LineChart>
-              </ResponsiveContainer>
+              <AreaPlot data={item.itemsCharts} dataKey="price" color="#0052ff" height="100%" compact />
             </div>
             <div className="-mb-1.5 min-w-[5.5rem] text-right">
               <div className="text-base-1s">{item.price}</div>

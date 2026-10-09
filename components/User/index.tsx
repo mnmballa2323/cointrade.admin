@@ -1,5 +1,5 @@
-import { Menu, MenuButton, MenuItems, Transition } from '@headlessui/react';
-import { useColorMode } from '@chakra-ui/color-mode';
+import { Menu, MenuButton, MenuItems, Transition } from '@/platform/primitives';
+import { useColorMode } from '@/components/NativeUI';
 import Icon from '@/components/Icon';
 import Image from '@/components/Image';
 import NavLink from './NavLink';

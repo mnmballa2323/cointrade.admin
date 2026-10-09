@@ -1,11 +1,11 @@
 import React from 'react';
-import { LineChart, Line, ResponsiveContainer } from 'recharts';
-import Link from 'next/link';
+import { AreaPlot, BarPlot, RatioPlot } from '@/components/NativeCharts';
+import Link from '@/platform/navigation';
 import Image from '@/components/Image';
 import Percent from '@/components/Percent';
 import { prices } from '@/mocks/trade';
-import { useRouter } from 'next/navigation';
-import { Divider } from '@chakra-ui/react';
+import { useRouter } from '@/platform/navigation';
+import { Divider } from '@/components/NativeUI';
 
 type PricesProps = {};
 
@@ -41,27 +41,7 @@ const Prices = ({}: PricesProps) => {
               </div>
             </div>
             <div className="mx-4 h-9 w-20 shrink-0 2xl:hidden lg:block md:hidden">
-              <ResponsiveContainer width="100%" height="100%">
-                <LineChart
-                  width={300}
-                  height={100}
-                  data={item.itemsCharts}
-                  margin={{
-                    top: 0,
-                    right: 0,
-                    left: 0,
-                    bottom: 0,
-                  }}
-                >
-                  <Line
-                    type="linear"
-                    dataKey="price"
-                    dot={false}
-                    stroke={item.percent > 0 ? '#32AE60' : '#F04D1A'}
-                    strokeWidth={2}
-                  />
-                </LineChart>
-              </ResponsiveContainer>
+              <AreaPlot data={item.itemsCharts} dataKey="price" color="#0052ff" height="100%" compact />
             </div>
             <div className="text-base-1s w-24 shrink-0 md:hidden">
               {item.price}

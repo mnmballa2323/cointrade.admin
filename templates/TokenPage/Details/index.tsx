@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Icon from '@/components/Icon';
 import TooltipEle from '@/components/TooltipEle';
-import { Icon as QuestionMart } from '@chakra-ui/react';
+import { Icon as QuestionMart } from '@/components/NativeUI';
 import { toast } from 'sonner';
 
 type DetailsProps = {

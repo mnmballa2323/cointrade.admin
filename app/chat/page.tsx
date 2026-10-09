@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { NextPage } from '@/platform/types';
 import ChatPage from '@/templates/Chat/ChatPage';
 
 const Chat: NextPage = () => {

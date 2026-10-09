@@ -1,5 +1,5 @@
 import UserDetails from "@/templates/UserDeatils";
-import { NextPage } from "next";
+import { NextPage } from "@/platform/types";
 
 type Params = {
   userId: string;

@@ -1,4 +1,4 @@
-import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
+import { AreaPlot, BarPlot, RatioPlot } from '@/components/NativeCharts';
 import Card from '@/components/Card';
 
 const data = [
@@ -22,30 +22,7 @@ const GreedIndex = ({}: GreedIndexProps) => {
     >
       <div className="md:-mx-2">
         <div className="relative mx-auto mt-14 h-40 w-80 lg:my-8 md:mb-2 md:mt-6">
-          <ResponsiveContainer width="100%" height="100%">
-            <PieChart width={800} height={400}>
-              <Pie
-                data={data}
-                cx={155}
-                cy={160}
-                startAngle={180}
-                endAngle={0}
-                innerRadius={128}
-                outerRadius={160}
-                fill="#8884d8"
-                paddingAngle={1}
-                dataKey="value"
-                stroke="transparent"
-              >
-                {data.map((entry, index) => (
-                  <Cell
-                    key={`cell-${index}`}
-                    fill={COLORS[index % COLORS.length]}
-                  />
-                ))}
-              </Pie>
-            </PieChart>
-          </ResponsiveContainer>
+          <RatioPlot data={data} colors={COLORS} unit="" showLabels={false} />
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 text-center">
             <div className="text-h1 md:text-h2">82</div>
             <div className="text-title-1m text-theme-secondary">Greed</div>

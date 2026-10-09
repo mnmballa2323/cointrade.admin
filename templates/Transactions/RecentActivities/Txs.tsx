@@ -1,8 +1,8 @@
 import React from 'react';
 import Icon from '@/components/Icon';
-import { Icon as QuestionMart } from '@chakra-ui/react';
+import { Icon as QuestionMart } from '@/components/NativeUI';
 import TooltipEle from '@/components/TooltipEle';
-import Link from 'next/link';
+import Link from '@/platform/navigation';
 import { useEffect, useState } from 'react';
 
 const AllTsxTable = () => {
