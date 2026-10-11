@@ -14,3 +14,7 @@
 - Replaced Next.js, headless/motion/Radix controls, Tailwind tooling and web test/bundler tooling with original TypeScript browser compilation, native controls/navigation and Node tests. Updated Docker/CodeBuild/local startup. Removed unused MongoDB binary, pnpm and stale build/dependency trees; preserved local database data.
 - Verification: 403 backend tests, 12 frontend tests, four audit tests, native protocol/web checks, provider and approved-addition checks pass. Backend build and both web type checks pass. Homepage/login/legal/admin preview checked in browser; old Next build overlay resolved at localhost:3002.
 - Web rendering is now client-side; image optimization, framework animation timing, automatic utility CSS generation and API compression are not retained. Production proxy/client-IP behavior needs review. No deployment, live provider certification or real trade occurred.
+
+## 2026-10-10 — Scoped runtime policy approval
+
+Recorded direct user approval for separately reviewed exact-version runtime/OS/compiler licenses in AGENTS.md. Application dependencies remain pure MIT/Apache-2.0. No component/image approval or deployment is granted. Admin application code is unchanged.
